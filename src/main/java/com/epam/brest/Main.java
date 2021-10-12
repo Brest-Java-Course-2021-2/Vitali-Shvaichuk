@@ -1,7 +1,6 @@
 package com.epam.brest;
 
-import com.epam.brest.calc.CalcImpl;
-
+import com.epam.brest.calc.Calc;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
@@ -21,7 +20,7 @@ public class Main {
             distance = getValueFromInput(scanner, "Enter distance: ");
             pricePerKm = getValueFromInput(scanner, "Enter price per km: ");
             if (weight != null && pricePerKg != null && distance != null && pricePerKm != null) {
-                deliveryCost = new CalcImpl().calculate(weight, pricePerKg, distance, pricePerKm);
+                deliveryCost = Calc.calculate(weight, pricePerKg, distance, pricePerKm);
                 System.out.println("Delivery cost: " + deliveryCost);
             }
         }
