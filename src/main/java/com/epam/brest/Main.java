@@ -5,6 +5,7 @@ import com.epam.brest.json.Price;
 import com.epam.brest.json.PriceParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
@@ -14,6 +15,19 @@ public class Main {
     static boolean continueScan = true;
 
     public static void main(String[] args) throws IOException, ParseException {
+        String fileName;
+        if (args.length == 0) {
+            System.out.println("The prices filename was not specified. " +
+                               "Switching to default prices JSON file...");
+            fileName = "prices.json";
+        } else {
+            fileName = args[0];
+            if (!new File("src/main/resources/" + fileName).exists()) {
+                System.out.println("File \"" + fileName + "\" does not exist. " +
+                        "Switching to default prices JSON file...");
+                fileName = "prices.json";
+            }
+        }
         BigDecimal weight;
         BigDecimal distance;
         BigDecimal pricePerKg;
@@ -24,8 +38,8 @@ public class Main {
             weight = getValueFromInput(scanner, "Enter weight: ");
             distance = getValueFromInput(scanner, "Enter distance: ");
             if (weight != null && distance != null) {
-                pricePerKg = getPriceFromJSON("prices.json", "price-per-kg", weight);
-                pricePerKm = getPriceFromJSON("prices.json", "price-per-km", distance);
+                pricePerKg = getPriceFromJSON(fileName, "price-per-kg", weight);
+                pricePerKm = getPriceFromJSON(fileName, "price-per-km", distance);
                 CalcImpl calculator = new CalcImpl(weight, distance, pricePerKg, pricePerKm);
                 deliveryCost = calculator.calculate();
                 System.out.println("Delivery cost: " + deliveryCost);
