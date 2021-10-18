@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Task Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header__heading">Team Task Tracker.</h1>
+            <a class="link active" href="index.html">Task list</a>
+            <a class="link" href="efficiency.html">Efficiency statistics</a>
+        </div>
+        <div class="main">
+            <h2 class="table-label">Actual task list.</h2>
+            <div class="filter">
+                <form>
+                    <input type="text" class="col-filter terms-filter" value=""/>
+                    <input type="text" class="col-filter description-filter" value=""/>
+                    <input type="text" class="col-filter executor-filter" value=""/>
+                    <input type="text" class="col-filter initiator-filter" value=""/>
+                    <input type="text" class="col-filter status-filter" value=""/>
+                    <input type="button" class="button apply-button" value="Apply filter"/>
+                </form>
+            </div>
+            <table class="task-list">
+                <thead>
+                    <tr class="table-row">
+                        <th class="table-header">terms</th>
+                        <th class="table-header">short description</th>
+                        <th class="table-header">executor</th>
+                        <th class="table-header">initiator</th>
+                        <th class="table-header">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td class="table-column terms-col">hot</td>
+                        <td class="table-column description-col">Print new documents</td>
+                        <td class="table-column executor-col">Joshua Lindberg</td>
+                        <td class="table-column initiator-col">Bartholomeo Diaz</td>
+                        <td class="table-column status-col">scheduled</td>
+                        <td class="empty-col">
+                            <a href="tasks/1.html" class="link view-button">View</a>
+                            <a href="tasks/1.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">free</td>
+                        <td class="table-column">Review an article</td>
+                        <td class="table-column">Karl Marx</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">in progress</td>
+                        <td class="empty-col">
+                            <a href="tasks/2.html" class="link view-button">View</a>
+                            <a href="tasks/2.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">ordinal</td>
+                        <td class="table-column">Collect fresh news</td>
+                        <td class="table-column">Freddy Mercury</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">completed</td>
+                        <td class="empty-col">
+                            <a href="tasks/3.html" class="link view-button">View</a>
+                            <a href="tasks/3.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">soft</td>
+                        <td class="table-column">Organize a meeting</td>
+                        <td class="table-column">Vasco da Gama</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">in progress</td>
+                        <td class="empty-col">
+                            <a href="tasks/4.html" class="link view-button">View</a>
+                            <a href="tasks/4.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">hot</td>
+                        <td class="table-column">Sign today's documents</td>
+                        <td class="table-column">James Milner</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">completed</td>
+                        <td class="empty-col">
+                            <a href="tasks/5.html" class="link view-button">View</a>
+                            <a href="tasks/5.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">soft</td>
+                        <td class="table-column">Verify dubious data</td>
+                        <td class="table-column">Kevin Spacey</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">rejected</td>
+                        <td class="empty-col">
+                            <a href="tasks/6.html" class="link view-button">View</a>
+                            <a href="tasks/6.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">soft</td>
+                        <td class="table-column">Answer emails</td>
+                        <td class="table-column">Ragnar Lothbrok</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">completed</td>
+                        <td class="empty-col">
+                            <a href="tasks/7.html" class="link view-button">View</a>
+                            <a href="tasks/7.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">free</td>
+                        <td class="table-column">Meet key customer</td>
+                        <td class="table-column">Sarah Tancredi</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">cancelled</td>
+                        <td class="empty-col">
+                            <a href="tasks/8.html" class="link view-button">View</a>
+                            <a href="tasks/8.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">ordinal</td>
+                        <td class="table-column">Make daily reports</td>
+                        <td class="table-column">Peter Jackson</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">in progress</td>
+                        <td class="empty-col">
+                            <a href="tasks/9.html" class="link view-button">View</a>
+                            <a href="tasks/9.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">ordinal</td>
+                        <td class="table-column">Take an interview</td>
+                        <td class="table-column">Salvador Dali</td>
+                        <td class="table-column">Bartholomeo Diaz</td>
+                        <td class="table-column">scheduled</td>
+                        <td class="empty-col">
+                            <a href="tasks/10.html" class="link view-button">View</a>
+                            <a href="tasks/10.html" class="link edit-button">Edit</a>
+                            <a href="" class="link delete-button">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <div class="footer__text">&copy; Vitali Shvaichuk 2021</div>
+        </div>
+    </div>
+</body>
+</html>
