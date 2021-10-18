@@ -1,4 +1,4 @@
-package com.epam.brest.json;
+package com.epam.brest.model;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

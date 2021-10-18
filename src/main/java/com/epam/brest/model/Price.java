@@ -1,4 +1,4 @@
-package com.epam.brest.json;
+package com.epam.brest.model;
 
 public class Price {
     private final Double from;
